@@ -5,21 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Trends for Forum</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
     :root {
-      --bg:       #0a0a0f;
-      --surface:  #12121a;
-      --border:   #1e1e2e;
-      --muted:    #3a3a52;
-      --text:     #e2e2f0;
-      --sub:      #8888aa;
+      --bg:       #1a1a2e;
+      --surface:  #222240;
+      --border:   #2e2e4a;
+      --muted:    #4a4a6a;
+      --text:     #eeeef5;
+      --sub:      #9999bb;
       --green:    #00e676;
       --green-dim:#00c853;
       --yellow:   #ffd740;
       --red:      #ff5252;
-      --blue:     #448aff;
+      --blue:     #5c9aff;
       --purple:   #ce93d8;
-      --radius:   10px;
-      --font:     'SF Mono', 'Fira Code', 'Consolas', monospace;
+      --radius:   12px;
+      --font:     'Inter', -apple-system, 'Segoe UI', sans-serif;
+      --mono:     'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,9 +31,10 @@
       background: var(--bg);
       color: var(--text);
       font-family: var(--font);
-      font-size: 13px;
-      line-height: 1.6;
+      font-size: 13.5px;
+      line-height: 1.65;
       min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
 
     /* ── Header ── */
@@ -42,7 +46,7 @@
       justify-content: space-between;
       position: sticky;
       top: 0;
-      background: rgba(10,10,15,0.95);
+      background: rgba(26,26,46,0.95);
       backdrop-filter: blur(8px);
       z-index: 10;
     }
@@ -62,7 +66,7 @@
       gap: 0;
       border-bottom: 1px solid var(--border);
       padding: 0 28px;
-      background: rgba(10,10,15,0.7);
+      background: rgba(26,26,46,0.7);
     }
 
     .tab-btn {
@@ -92,7 +96,7 @@
     /* ── Buttons ── */
     button {
       font-family: var(--font);
-      font-size: 12px;
+      font-size: 12.5px;
       cursor: pointer;
       border: none;
       border-radius: 6px;
@@ -115,7 +119,7 @@
 
     #topic-input {
       font-family: var(--font);
-      font-size: 12px;
+      font-size: 13px;
       background: var(--surface);
       border: 1px solid var(--border);
       color: var(--text);
@@ -172,7 +176,7 @@
     }
     .stat { display: flex; flex-direction: column; gap: 2px; }
     .stat-label { font-size: 10px; color: var(--sub); letter-spacing: .06em; text-transform: uppercase; }
-    .stat-value { font-size: 18px; font-weight: 700; }
+    .stat-value { font-family: var(--mono); font-size: 18px; font-weight: 700; }
     .stat-value.green  { color: var(--green); }
     .stat-value.yellow { color: var(--yellow); }
     .stat-value.red    { color: var(--red); }
@@ -281,13 +285,13 @@
     .bar-fill.yellow { background: var(--yellow); }
     .bar-fill.red    { background: var(--red); }
     .bar-fill.muted  { background: var(--muted); }
-    .score-num { font-size: 12px; font-weight: 700; width: 38px; text-align: right; }
+    .score-num { font-family: var(--mono); font-size: 12px; font-weight: 700; width: 38px; text-align: right; }
 
     /* ── Meta row ── */
     .meta-row { display: flex; gap: 16px; flex-wrap: wrap; }
     .meta-item { display: flex; flex-direction: column; gap: 1px; }
     .meta-key   { font-size: 9px; color: var(--sub); text-transform: uppercase; letter-spacing: .07em; }
-    .meta-val   { font-size: 12px; font-weight: 600; }
+    .meta-val   { font-family: var(--mono); font-size: 12px; font-weight: 600; }
     .meta-val.green  { color: var(--green); }
     .meta-val.yellow { color: var(--yellow); }
     .meta-val.red    { color: var(--red); }
